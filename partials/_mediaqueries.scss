@@ -1,0 +1,208 @@
+@media screen and (max-width: 992px) {
+
+	.wrapper {
+		max-width: 85%;
+	}
+
+	.info {
+		&__content {
+			@include flexbox(column, space-around, center);
+
+			&__image,
+			&__description {
+				width: 90%;
+				margin-bottom: 18px;
+			}
+		}
+	}
+
+	.block {
+		&__info {
+			margin: 0 auto 30px;
+			width: 60%;
+		}
+
+		&__container {
+			margin: 0 auto 30px;
+			max-width: 100%;
+			height: 250px;
+
+			&__socials {
+				padding: 10px 0;
+
+				&__icons {
+					@include flexbox(row, space-around, center);
+					width: 85%;
+				}
+			}
+
+			&__submit {
+				&__input {
+					width: 70%
+				}
+			}
+		}
+
+		&__showcase {
+			max-width: 45%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.banner__block__title {
+		width: 100%;
+	}
+
+	.wrapper {
+		max-width: 85%;
+	}
+
+	.info {
+		&__container {
+			@include flexbox(row, space-between, center);
+			height: auto;
+
+			&__block {
+				width: 45%
+			}
+		}
+
+		&__line {
+			display: none;
+		}
+	}
+
+	.block {
+
+		&__info {
+			@include flexbox (column, center, stretch);
+			width: 80%;
+		}
+
+		&__showcase,
+		&__gallery {
+			max-width: 100%;
+		}
+
+		&__showcase {
+			&__container {
+				&__image {
+					max-width: 120px;
+				}
+			}
+		}
+
+		&__gallery {
+			margin-top: 30px;
+
+			&__showcase {
+				height: auto;
+				max-width: 70%;
+
+				>* {
+					width: 33%;
+					height: 33%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	* {
+		font-size: 13px;
+	}
+
+	.banner {
+		&__block {
+			&__paragraph {
+				@include font(2rem, $title-font, 400, normal, $main-color, none);
+
+				&--small {
+					@include font(1rem, $title-font, 400, normal, $secondary-color, none);
+					margin-top: 65px;
+				}
+
+				&--thin {
+					@include font(1rem, $title-font, 400, normal, $secondary-color, none);
+					margin: 0;
+				}
+
+				&--small-margin {
+					margin-top: 25px;
+				}
+			}
+
+			&__title {
+				@include font(4rem, $main-font, 700, 5.8rem, $main-color, uppercase);
+
+				&--small {
+					@include font(1.25rem, $main-font, 700, normal, $secondary-color, uppercase);
+					margin-top: 5px;
+				}
+
+				&--red {
+					@include font(1rem, $main-font, 700, normal, $highlight-color, uppercase);
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		max-width: 90%;
+	}
+
+	.info {
+		&__container {
+			@include flexbox(column, flex-start, center);
+		}
+	}
+
+	.article {
+		&__block {
+			&__number {
+				@include font(2rem, $main-font, 700, normal, $main-color, uppercase);
+
+				&--small {
+          font-size: 1rem;
+				}
+			}
+
+			&__text {
+				@include font(0.50rem, $main-font, 400, normal, $main-color, uppercase);
+
+				&--small {
+					@include font(0.6rem, $description-font, 300, normal, $main-color, uppercase);
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	.showcase {
+		&__container {
+			@include flexbox (column, flex-start, center);
+		}
+
+		&__block {
+			max-width: 75%;
+		}
+	}
+
+	.description {
+		&__container {
+			margin-right: 5px;
+			padding: 20px 24px;
+
+			&--no-border {
+				padding: 0;
+			}
+
+			&__picture {
+				max-width: 100px;
+			}
+		}
+	}
+}
